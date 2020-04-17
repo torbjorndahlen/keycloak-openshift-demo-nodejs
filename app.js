@@ -69,5 +69,5 @@ app.get('/admin', keycloak.protect('realm:admin'), function (req, res) {
 });
 
 app.listen(8088, function () {
-  console.log('Started at port 8088');
+  console.log('Started at port 8080');
 });
