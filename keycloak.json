@@ -1,8 +1,8 @@
 {
   "realm": "demo",
+  "bearer-only": true,
   "auth-server-url": "https://sso-keycloak.6923.rh-us-east-1.openshiftapps.com/auth",
   "ssl-required": "external",
   "resource": "demo-service",
-  "public-client": true,
   "confidential-port": 0
 }

@@ -27,7 +27,7 @@ const port = process.env.PORT || 8080;
 var app = express();
 app.use(bodyParser.json());
 
-//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Enable CORS support
 app.use(cors());
