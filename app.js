@@ -21,6 +21,9 @@ var bodyParser = require('body-parser');
 var Keycloak = require('keycloak-connect');
 var cors = require('cors');
 
+const host = process.env.IP  || '0.0.0.0';
+const port = process.env.PORT || 8080;
+
 var app = express();
 app.use(bodyParser.json());
 
@@ -68,6 +71,6 @@ app.get('/admin', keycloak.protect('realm:admin'), function (req, res) {
   res.json({message: 'admin'});
 });
 
-app.listen(8088, function () {
-  console.log('Started at port 8080');
+app.listen(port, host, function () {
+  console.log('Started at ' + host + ":" + port);
 });
