@@ -9,6 +9,7 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "express-session": "^1.14.2",
-    "cors": "^2.8.1"
+    "cors": "^2.8.1",
+    "express-cache-controller": "^1.1.0"
   }
 }
