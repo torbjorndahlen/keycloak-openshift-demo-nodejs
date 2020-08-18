@@ -20,12 +20,13 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var Keycloak = require('keycloak-connect');
 var cors = require('cors');
-var cacheControl = require('express-cache-controller');
+//var cacheControl = require('express-cache-controller');
+var serveStatic = require('serve-static');
 
 const host = process.env.IP  || '0.0.0.0';
 //const host = 'localhost';
 const port = process.env.PORT || 8080;
-const version = '1.7';
+const version = '1.8';
 
 var app = express();
 app.use(bodyParser.json());
@@ -62,10 +63,11 @@ app.use(keycloak.middleware({
   admin: '/'
 }));
 
-app.use(cacheControl());
+//app.use(cacheControl());
+app.use(serveStatic('/'));
 
 app.get('/public', function (req, res) {
-  res.cacheControl = {public: true};
+  //res.cacheControl = {public: true};
   res.json({message: 'public'});
 });
 
