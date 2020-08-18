@@ -20,6 +20,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var Keycloak = require('keycloak-connect');
 var cors = require('cors');
+var cacheControl = require('express-cache-controller');
 
 const host = process.env.IP  || '0.0.0.0';
 //const host = 'localhost';
@@ -61,8 +62,10 @@ app.use(keycloak.middleware({
   admin: '/'
 }));
 
+app.use(cacheControl());
+
 app.get('/public', function (req, res) {
-  res.setHeader('Cache-control', 'public');
+  res.cacheControl = {public: true};
   res.json({message: 'public'});
 });
 
