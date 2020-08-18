@@ -24,7 +24,7 @@ var cors = require('cors');
 const host = process.env.IP  || '0.0.0.0';
 //const host = 'localhost';
 const port = process.env.PORT || 8080;
-const version = '1.4';
+const version = '1.5';
 
 var app = express();
 app.use(bodyParser.json());
@@ -62,8 +62,7 @@ app.use(keycloak.middleware({
 }));
 
 app.get('/public', function (req, res) {
-  res.set('Cache-Control', "public");
-  res.json({message: 'public'});
+  res.set('Cache-Control', "public").json({message: 'public'});
 });
 
 app.get('/secured', keycloak.protect(), function (req, res) {
