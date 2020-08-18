@@ -1,8 +1,8 @@
 {
   "realm": "demo",
   "bearer-only": true,
-  "auth-server-url": "https://secure-keycloak-keycloak.apps.rhpds3x.openshift.opentlc.com/auth",
-  "ssl-required": "external",
-  "resource": "service",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "none",
+  "resource": "service-nodejs",
   "confidential-port": 0
 }

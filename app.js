@@ -22,7 +22,9 @@ var Keycloak = require('keycloak-connect');
 var cors = require('cors');
 
 const host = process.env.IP  || '0.0.0.0';
-const port = process.env.PORT || 8080;
+//const host = 'localhost';
+const port = process.env.PORT || 8088;
+const version = '1.4';
 
 var app = express();
 app.use(bodyParser.json());
@@ -60,6 +62,7 @@ app.use(keycloak.middleware({
 }));
 
 app.get('/public', function (req, res) {
+  res.set('Cache-control', "public");
   res.json({message: 'public'});
 });
 
@@ -72,5 +75,6 @@ app.get('/admin', keycloak.protect('realm:admin'), function (req, res) {
 });
 
 app.listen(port, host, function () {
+  console.log('service-nodejs ' + version);
   console.log('Started at ' + host + ":" + port);
 });
