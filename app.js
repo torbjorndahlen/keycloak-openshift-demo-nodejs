@@ -26,7 +26,7 @@ var serveStatic = require('serve-static');
 const host = process.env.IP  || '0.0.0.0';
 //const host = 'localhost';
 const port = process.env.PORT || 8080;
-const version = '1.8';
+const version = '1.9';
 
 var app = express();
 app.use(bodyParser.json());
@@ -64,7 +64,7 @@ app.use(keycloak.middleware({
 }));
 
 //app.use(cacheControl());
-app.use(serveStatic('/'));
+app.use(serveStatic('/public'));
 
 app.get('/public', function (req, res) {
   //res.cacheControl = {public: true};
