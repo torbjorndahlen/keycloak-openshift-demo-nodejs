@@ -1,10 +1,8 @@
 {
   "realm": "demo",
-  "auth-server-url": "https://sso-sso-app-demo.apps.cluster-d6j6m.d6j6m.sandbox945.opentlc.com/auth/",
+  "bearer-only": true,
+  "auth-server-url": "https://keycloak-sso.apps.cluster-d6j6m.d6j6m.sandbox945.opentlc.com/auth/",
   "ssl-required": "external",
   "resource": "service-nodejs",
-  "credentials": {
-    "secret": "f03cd72c-b686-49f1-bf93-76eb6e47395c"
-  },
   "confidential-port": 0
 }
