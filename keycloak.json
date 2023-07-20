@@ -1,10 +1,10 @@
 {
-  "realm": "demo-sso",
+  "realm": "sso-demo",
   "auth-server-url": "https://sso-sso-demo.apps.cluster-pjvvm.pjvvm.sandbox595.opentlc.com/auth/",
   "ssl-required": "all",
   "resource": "service-nodejs",
   "credentials": {
-    "secret": "lFDQ4dfyLP359JcuTCkpozzIkRsrKDMV"
+    "secret": "jigqy7BMyWAkB7h1DZAuxRdYTwTqj7j2"
   },
   "confidential-port": 0
 }

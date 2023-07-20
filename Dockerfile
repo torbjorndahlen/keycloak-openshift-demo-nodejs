@@ -1,4 +1,4 @@
-FROM node:8
+FROM registry.redhat.io/rhel8/nodejs-16-minimal:latest
 
 WORKDIR /usr/src/app
 
