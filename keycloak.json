@@ -4,7 +4,7 @@
   "ssl-required": "external",
   "resource": "service-nodejs",
   "credentials": {
-    "secret": "eO17M1RIWend6d3qNxg2VaX2Wdq2J6cn"
+    "secret": "soDOakCn3HuhVxswd6o2OZziDBzd1wgj"
   },
   "confidential-port": 0
 }
