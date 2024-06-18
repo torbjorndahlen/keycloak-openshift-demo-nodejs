@@ -1,10 +1,8 @@
 {
-  "realm": "sso-demo",
-  "auth-server-url": "https://sso-sso-demo.apps.cluster-pjvvm.pjvvm.sandbox595.opentlc.com/auth/",
+  "realm": "rhbk-demo",
+  "auth-server-url": "https://rhbk-rhbk-demo.apps.cluster-zwh96.dynamic.redhatworkshops.io/",
   "ssl-required": "external",
   "resource": "service-nodejs",
-  "credentials": {
-    "secret": "XYDiEVK5vAv1Ckr6yUVhQgTlDMwLaun0"
-  },
+  "public-client": true,
   "confidential-port": 0
 }
