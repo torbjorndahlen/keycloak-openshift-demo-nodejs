@@ -3,6 +3,8 @@
   "auth-server-url": "https://rhbk-rhbk-demo.apps.cluster-zwh96.dynamic.redhatworkshops.io/",
   "ssl-required": "external",
   "resource": "service-nodejs",
-  "public-client": true,
+  "credentials": {
+    "secret": "eO17M1RIWend6d3qNxg2VaX2Wdq2J6cn"
+  },
   "confidential-port": 0
 }
