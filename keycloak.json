@@ -1,7 +1,7 @@
 {
   "realm": "rhbk-demo",
   "auth-server-url": "https://rhbk-rhbk-demo.apps.cluster-zwh96.dynamic.redhatworkshops.io/",
-  "ssl-required": "all",
+  "ssl-required": "external",
   "resource": "service-nodejs",
   "public-client": true,
   "confidential-port": 0
